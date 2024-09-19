@@ -1,0 +1,35 @@
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+  }
+
+  .welcome {
+    padding-top: 10vh; /* Adjust the space from the top of the viewport */
+    text-align: center; /* Center the text within the .welcome div */
+    font-size: 3vh;
+    padding-bottom: 2vh;
+  }
+
+  .button-container {
+    display: flex; /* Use flexbox to arrange buttons */
+    flex-direction: row; /* Arrange buttons in a row */
+    align-items: center; /* Center buttons vertically within the container */
+    justify-content: center; /* Center buttons horizontally within the container */
+    margin-bottom: 20px;/* Space between the button-container and the alert message */
+
+  }
+
+  .button-container button {
+    margin: 0 5px;/* Space between buttons horizontally */
+    font-size: 3vh;
+  }
+
+  .alert {
+    color: red;
+    text-align: center; /* Center the text within the alert */
+    font-size: 16px; /* Adjust font size as needed */
+  }

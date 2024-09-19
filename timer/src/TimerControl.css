@@ -1,0 +1,231 @@
+/* TimerControl.css */
+
+
+.timer-control-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+  text-align: center;
+  padding: 10px;
+  overflow: auto; /* Enable scrolling if needed */
+}
+
+/* Navbar Style */
+.navbar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+}
+
+/* Button Style */
+button {
+  padding: 8px 16px;
+  font-size: 1rem;
+  color: white;
+  background-color: blue;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  min-width: 80px;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: lightblue;
+}
+
+/* Input Controls */
+.input-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Space between label and input */
+  margin-bottom: 20px; /* Space below controls */
+}
+
+.input-controls input {
+  width: 3rem;
+  height: 2rem;
+  text-align: center;
+  font-size: 1rem;
+  padding: 2px;
+  border-radius: 8px;
+}
+
+.input-controls label {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+.timer-info {
+  font-size: 1.5rem;
+}
+
+/* Sound Toggle */
+.sound-toggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: .5em;
+}
+
+.sound-toggle label {
+  display: flex;
+  align-items: center;
+}
+
+.sound-toggle input {
+  margin-left: 5px;
+  border-radius: 8px;
+}
+
+/* Timer Button Container */
+.timer-button-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Allow wrapping */
+  justify-content: center; /* Center buttons horizontally */
+  gap: 10px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* Timer Button Specific Styles */
+.timer-button-container button {
+  font-size: 2vw;
+  padding: 8px 16px;
+}
+
+/* Timer Info */
+.timer-info {
+  margin: 10px 0;
+}
+
+/* Times Up Message */
+.times-up-message {
+  margin: 10px 0; /* Added margin to create space */
+  color: red;
+  animation: flash 2s infinite;
+  font-size: 2vw; /* Responsive font size */
+}
+
+@keyframes flash {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Time Input */
+.time-input {
+  width: 3rem;
+  text-align: center;
+}
+
+.image-display-container {
+  width: 400px; /* Fixed width */
+  height: 400px; /* Fixed height */
+  margin: 10px 0;
+  padding: 0;
+  text-align: center;
+  overflow: hidden; /* Hide any overflow */
+  box-sizing: border-box; /* Include padding and borders in width/height */
+}
+
+.image-display-container img {
+  width: 100%; /* Fill container width */
+  height: 100%; /* Fill container height */
+  object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
+}
+
+/* Heading */
+h1 {
+  margin: 0;
+  padding-top: 20px;
+  font-size: 1.5em;
+}
+
+/* Time Up Container */
+.time-up-container {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Logout Button */
+.logout-button {
+  color: white;
+  background-color: red;
+  border-radius: 8px;
+  font-size: 2vw; /* Responsive font size */
+  padding: 8px 16px; /* Adjust padding */
+}
+
+/* Logout Button Hover */
+.logout-button:hover {
+  background-color: Darkred;
+}
+
+/* Profile Button */
+.profile-button {
+  color: white;
+  background-color: blue;
+  border-radius: 8px;
+  font-size: 2vw; /* Responsive font size */
+  padding: 8px 16px; /* Adjust padding */
+}
+
+/* Profile Button Hover */
+.profile-button:hover {
+  background-color: lightblue;
+}
+
+/* Stop Alarm Message */
+.stop-alarm-message {
+  margin: 10px 0;
+  color: red;
+  animation: flash 2s infinite;
+  font-size: 2vw;
+}
+
+
+/* For Portrait (Vertical) Mode */
+@media (orientation: portrait) {
+  .timer-button-container {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center buttons horizontally */
+  }
+
+  button {
+    font-size: 4vw; /* Larger text on smaller screens */
+    padding: 10px 20px; /* Larger padding for better fit */
+  }
+
+  .times-up-message, .logout-button, .profile-button {
+    font-size: 4vw; /* Larger text on smaller screens */
+  }
+}
+
+/* For Landscape (Horizontal) Mode */
+@media (orientation: landscape) {
+  .timer-button-container {
+    flex-direction: row; /* Align buttons horizontally */
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center; /* Center buttons horizontally */
+  }
+
+  button {
+    font-size: 2vw; /* Adjust text size for medium screens */
+  }
+
+  .image-display-container img {
+    max-height: 80vh;
+  }
+}
