@@ -47,7 +47,6 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px; /* Space between label and input */
   margin-bottom: 20px; /* Space below controls */
 }
 
@@ -203,6 +202,13 @@ h1 {
     align-items: center; /* Center buttons horizontally */
   }
 
+  .input-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+    margin-bottom: 20px; /* Space below controls */
+  }
   button {
     font-size: 4vw; /* Larger text on smaller screens */
     padding: 10px 20px; /* Larger padding for better fit */

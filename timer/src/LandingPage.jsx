@@ -1,14 +1,8 @@
-// LandingPage.jsx
-
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './LandingPage.css';
 
 function LandingPage() {
-  const location = useLocation();
-  const queryParams = new URLSearchParams(location.search);
-  const message = queryParams.get('message');
-
   return (
     <div className="landing-page">
       <div className="welcome">
@@ -22,7 +16,6 @@ function LandingPage() {
           <button>Sign Up</button>
         </Link>
       </div>
-      {message && <div className="alert">{message}</div>}
     </div>
   );
 }

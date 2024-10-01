@@ -1,30 +1,32 @@
-
 .edit-profile-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    padding: 20px;
-  }
-.email-highlight {
-    color: Blue;
-    font-weight: bold;
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Arrange children in a column */
+  align-items: center; /* Center children horizontally */
+  justify-content: center; /* Center children vertically */
+  height: 100vh; /* Full viewport height */
+  padding: 20px; /* Space inside the container */
 }
-  .edit-profile-container input {
-    width: 100%;
-    max-width: 400px;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-  .success {
-    color: green;
-  }
 
-  .delete-button {
-    margin-top: 10px; /* Space above the button */
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: red;
-  }
+.email-highlight {
+  color: Blue; /* Text color set to blue */
+  font-weight: bold; /* Bold text */
+}
+
+.edit-profile-container input {
+  width: 100%; /* Full width of the container */
+  max-width: 400px; /* Maximum width of input fields */
+  padding: 10px; /* Inner spacing for input fields */
+  margin-bottom: 10px; /* Space below each input field */
+}
+
+.success {
+  color: green; /* Text color for success messages */
+}
+
+.delete-button {
+  margin-top: 10px; /* Space above the delete button */
+  padding: 10px; /* Inner spacing for the button */
+  font-size: 16px; /* Font size for button text */
+  cursor: pointer; /* Pointer cursor on hover */
+  background-color: red; /* Background color for delete button */
+}
