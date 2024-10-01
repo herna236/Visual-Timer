@@ -1,1 +1,0 @@
-this is an app that displays a mystery image behind a black overlay.  when a timer (with user input) is started the image is gradually revealed.  a user is limited to 5 timers that are longer than one minute and then the trial period is over and a user would have to pay to use a timer greater than one minute it is thougholy documented.
