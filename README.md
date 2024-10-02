@@ -1,10 +1,11 @@
 # Mystery Image Revealer App
 
-link to web app
+link to web app:
+
 https://frontend1-h5py.onrender.com/
 
 ## Overview
-The **Mystery Image Revealer App** App Overview
+**Mystery Image Revealer App**
 
 This is a visual timer application (react) that allows users to enter a timer length and an mystery image is gradually revealed as the timer winds down. 
 
