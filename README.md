@@ -41,4 +41,5 @@ Users start with a free trial that allows them to create 5 timers of unlimited l
 - **CORS**: For enabling cross-origin resource sharing.
 
 ## Installation
-- ive added a sample.env you will have to create a secret password and make sure the ports are configured correctly
+- A sample .env file is included. You will need to create a secret password and ensure that the ports are configured correctly.
+- Port configurations may also need to be updated in api.jsx depending on your default settings.
