@@ -70,7 +70,7 @@ const TimerControl = () => {
         const response = await api.get(`/user-status/${userId}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
-
+          //check for trial, has paid and length of timer/ do not allow over 60 seconds if trial period is over and hasnt paid
         if (response.data.trialPeriodOver && response.data.hasPaid === false && duration > 60) {
           alert('Your trial period is over. You can only use timers for 60 seconds or less with the unpaid version.');
           return;
