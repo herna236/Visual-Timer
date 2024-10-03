@@ -5,7 +5,7 @@ const User = require('../models/User');
 
 describe('User API', () => {
   before(async () => {
-    // Connect to MongoDB before tests 
+    // Connect to MongoDB before tests
     await mongoose.connect(process.env.MONGODB_URI_TEST, { useNewUrlParser: true, useUnifiedTopology: true });
   });
 
@@ -110,6 +110,4 @@ describe('User API', () => {
       expect(res.text).to.equal('Access denied. No token provided.');
     });
   });
-
-  // Add more tests for the other endpoints (edit-profile, delete-account, etc.)
 });
