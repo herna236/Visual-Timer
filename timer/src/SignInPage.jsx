@@ -11,25 +11,25 @@ function SignInPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // Clear previous token and userId if they exist
+      // Clear previous token and userId if they exist, prevents problems with multiple users on same device
       localStorage.removeItem('token');
       localStorage.removeItem('userId');
 
 
       const response = await api.post('/login', { email, password });
 
-      // Extract the token and userId from the response data
+
       const { token, userId } = response.data;
 
-      // Store the token and userId in local storage
+
       localStorage.setItem('token', token);
       localStorage.setItem('userId', userId);
 
       console.log('Logged in successfully');
-      // Redirect to TimerControl page
+
       navigate('/timer-control');
     } catch (error) {
-      // Handle errors
+
       console.log(error.response?.data)
       alert('Error logging in: ' + (error.response?.data || 'An Error occured'));
     }

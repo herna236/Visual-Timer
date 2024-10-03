@@ -6,26 +6,26 @@ export const AuthContext = createContext();
 
 // AuthProvider component to manage authentication state
 export const AuthProvider = ({ children }) => {
-  // State to track if the user is authenticated
+
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   // State to track if we are still checking authentication status
   const [isCheckingAuth, setIsCheckingAuth] = useState(true);
-  const navigate = useNavigate(); // Hook for programmatic navigation
-  const location = useLocation(); // Hook to get current route information
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     // Function to check authentication status
     const checkAuth = () => {
-      const token = localStorage.getItem('token'); // Retrieve token from localStorage
-      const path = location.pathname; // Get the current path
+      const token = localStorage.getItem('token');
+      const path = location.pathname;
 
       // No authentication needed for these routes
       if (path === '/sign-in' || path === '/sign-up' || path === '/') {
-        setIsCheckingAuth(false); // No need to check further
-        return; // Exit the function
+        setIsCheckingAuth(false);
+        return;
       }
 
-      // If a token exists, user is authenticated
+
       if (token) {
         setIsAuthenticated(true);
       } else {
@@ -35,15 +35,15 @@ export const AuthProvider = ({ children }) => {
         navigate('/?message=' + encodeURIComponent('Please sign in or register to view this page'));
       }
 
-      // Mark the authentication check as complete
+
       setIsCheckingAuth(false);
     };
 
     // Call the checkAuth function when component mounts or path changes
     checkAuth();
-  }, [navigate, location.pathname]); // Dependencies for useEffect
+  }, [navigate, location.pathname]);
 
-  // While checking auth, show a loading message
+
   if (isCheckingAuth) {
     return <div>Loading...</div>;
   }
@@ -51,7 +51,7 @@ export const AuthProvider = ({ children }) => {
   // Provide authentication state to child components
   return (
     <AuthContext.Provider value={{ isAuthenticated, setIsAuthenticated }}>
-      {children} {/* Render child components */}
+      {children}
     </AuthContext.Provider>
   );
 };
