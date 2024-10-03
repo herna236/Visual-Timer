@@ -1,11 +1,11 @@
 const request = require('supertest');
 const mongoose = require('mongoose');
-const app = require('../path/to/your/app'); // Adjust the path to your app
-const User = require('../models/User'); // Adjust the path to your User model
+const app = require('../Server.js');
+const User = require('../models/User');
 
 describe('User API', () => {
   before(async () => {
-    // Connect to MongoDB before tests
+    // Connect to MongoDB before tests 
     await mongoose.connect(process.env.MONGODB_URI_TEST, { useNewUrlParser: true, useUnifiedTopology: true });
   });
 
