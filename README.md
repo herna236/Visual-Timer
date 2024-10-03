@@ -7,7 +7,7 @@ https://frontend1-h5py.onrender.com/
 ## Overview
 **Mystery Image Revealer App**
 
-This is a visual timer application (react) that allows users to enter a timer length and an mystery image is gradually revealed as the timer winds down. 
+This is a visual timer application (react) that allows users to enter a timer length and an mystery image is gradually revealed as the timer winds down.
 
 This application allows users to sign up or log in and then manage timers for various tasks. After authentication, users are redirected to the main Timer Component page where they can:
 
@@ -41,5 +41,12 @@ Users start with a free trial that allows them to create 5 timers of unlimited l
 - **CORS**: For enabling cross-origin resource sharing.
 
 ## Installation
-- A sample .env file is included. You will need to create a secret password and ensure that the ports are configured correctly.
-- Port configurations may also need to be updated in api.jsx depending on your default settings.
+
+1. A sample `.env` file is included. You will need to create a secret password and ensure that the port configurations are set correctly.
+
+2. Port configurations may also need to be updated in `api.jsx` depending on your default settings.
+
+3. This application uses MongoDB as its database. Ensure you have a running MongoDB instance. Specify the connection URI in your `.env` file as follows:
+
+   ```plaintext
+   MONGODB_URI=mongodb://localhost:27017/Timer
